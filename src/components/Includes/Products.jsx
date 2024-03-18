@@ -4,16 +4,9 @@ import React from 'react';
 
 function Products() {
     return (
-        <div><h2>roducts</h2></div>
-        // <div className='wrapper'>
-        //     {products.map((items) => (
-        //         <div key={items.id}>
-        //             <div>
-        //                 <img src={items.img} alt={items.name} />
-        //             </div>
-        //         </div>
-        //     ))}
-        // </div>
+        <div>
+            <img src={'src/assets/images/Banner.png'} alt="" />
+        </div>
     )
 }
 
