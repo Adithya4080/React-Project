@@ -1,12 +1,14 @@
-import React from 'react'
-import PromptBar from '../../Includes/PromptBar'
-import NavbarTop from '../../Includes/navbar/NavbarTop'
+import React from 'react';
+import PromptBar from '../../Includes/PromptBar';
+import Navbar from '../../Includes/navbar/Navbar';
+import Products from '../../Includes/Products';
 
 function Home() {
     return (
         <>
             <PromptBar />
-            <NavbarTop />
+            <Navbar />
+            <Products />
         </>
     )
 }
