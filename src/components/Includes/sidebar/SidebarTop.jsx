@@ -16,7 +16,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <div className='border-b border-gray-500'>
+            <div className='border-b border-gray-300'>
                 <h3 className='mb-2 font-bold'>Widget price filter</h3>
                 <div className='flex justify-between'>
                     <div>

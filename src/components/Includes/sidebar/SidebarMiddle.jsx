@@ -26,7 +26,7 @@ const SidebarMiddle = () => {
     };
 
     return (
-        <div className='my-5 border-b border-gray-500'>
+        <div className='my-5 border-b border-gray-300'>
             <h3 className='font-bold'>Product Categories</h3>
             <ul>
                 {categories.map((category) => (
