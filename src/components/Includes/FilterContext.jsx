@@ -6,6 +6,7 @@ export const FilterProvider = ({ children }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [priceRange, setPriceRange] = useState([0, 30]);
     const [selectedCategories, setSelectedCategories] = useState([]);
+    const [wishlist, setWishlist] = useState([]);
 
     const handleSearchChange = (term) => {
         setSearchTerm(term);
@@ -22,6 +23,16 @@ export const FilterProvider = ({ children }) => {
             setSelectedCategories([...selectedCategories, category]);
         }
     };
+
+    const addToWishlist = (productId) => {
+        if (!wishlist.includes(productId)) {
+            setWishlist([...wishlist, productId]);
+        }
+    };
+
+    const removeFromWishlist = (productId) => {
+        setWishlist(wishlist.filter(id => id !== productId));
+    };
     
     return (
         <FilterContext.Provider
@@ -31,7 +42,10 @@ export const FilterProvider = ({ children }) => {
                 priceRange,
                 handlePriceRangeChange,
                 selectedCategories,
-                handleCategoryChange
+                handleCategoryChange,
+                wishlist,
+                addToWishlist,
+                removeFromWishlist
             }}
         >
             {children}

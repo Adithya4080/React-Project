@@ -7,10 +7,11 @@ import { FilterContext } from '../FilterContext';
 
 
 function NavbarMiddle() {
-    const {searchTerm, handleSearchChange} = useContext(FilterContext)
+    const {searchTerm, handleSearchChange, wishlist} = useContext(FilterContext)
+
     return (
         <div className='border border-b-gray-400 sticky top-0 z-10 bg-white'>
-            <div className='wrapper py-2 flex justify-between'>
+            <div className='wrapper py-3 flex justify-between'>
                 <div className='flex space-x-2'>
                     <h1>
                         <img src={'src/assets/images/Logo.png'} alt="Logo" />
@@ -38,10 +39,12 @@ function NavbarMiddle() {
                     <div className="flex flex-col items-center">
                         <FaRegHeart className="text-2xl" />
                         <h4 className="text-sm">Wishlist</h4>
+                        <span className="text-sm absolute top-0 ml-7 bg-red-700 text-white px-1 rounded-lg text-center">{wishlist.length}</span>
                     </div>
                     <div className="flex flex-col items-center">
                         <MdShoppingCart className="text-2xl" />
                         <h4 className="text-sm">Your Cart</h4>
+                        <span className="text-sm absolute top-0 ml-5 bg-red-700 text-white px-1 rounded-lg text-center">0</span>
                     </div>
                 </div>
             </div>

@@ -1,24 +1,40 @@
 import React, { useContext } from 'react';
 import products from '../../data/data.json';
 import { AiFillStar } from 'react-icons/ai';
-import { CiShoppingCart, CiHeart } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
 import { FilterContext } from '../FilterContext';
 
+
 function ProductsBottom() {
-    const { searchTerm, priceRange, selectedCategories } = useContext(FilterContext)
+    const { searchTerm, priceRange, selectedCategories, wishlist, addToWishlist, removeFromWishlist } = useContext(FilterContext)
 
     const filteredProducts = products.filter(item =>
         (searchTerm === '' || item.title.toLowerCase().includes(searchTerm.toLowerCase())) &&
         (item.newPrice >= priceRange[0] && item.newPrice <= priceRange[1]) &&
         (selectedCategories.length === 0 || selectedCategories.includes(item.category))
     );
+
+    const handleHeartClick = (productId) => {
+        const isWishlistItem = wishlist.includes(productId);
+        if (isWishlistItem) {
+            removeFromWishlist(productId);
+        } else {
+            addToWishlist(productId);
+        }
+    };
+
     return (
         <div className='grid grid-cols-5 mt-10'>
             {filteredProducts.map((items) =>(
                 <div key={items.id} className='border p-2 space-y-2'>
                     <div className='flex justify-between'>
                         <button className='border bg-red-600 text-white text-xs py-1 px-2 rounded-lg'>{items.discount}</button>
-                        <CiHeart className='text-xl' />
+                        <FaHeart
+                            className='text-xl cursor-pointer'
+                            style={{ color: wishlist.includes(items.id) ? 'red' : 'gray' }}
+                            onClick={() => handleHeartClick(items.id)}
+                        />
                     </div>                    
                     <div className='w-full'><img src={items.img} alt={items.name} className='w-full' /></div>
                     <h3 className='font-bold text-xm'>{items.title}</h3>
