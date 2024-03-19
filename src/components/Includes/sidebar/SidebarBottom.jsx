@@ -21,16 +21,20 @@ function SidebarBottom() {
         </div>
         <div className='border-b border-gray-300'>
             <h3>Product Status</h3>
-            <input
-                type="checkbox"
-                name="category"
-            />
-            <span className='ml-2'>In Stock</span>
-            <input
-                type="checkbox"
-                name="category"
-            />
-            <span className='ml-2'>On Sale</span>
+            <div>
+                <input
+                    type="checkbox"
+                    name="category"
+                />
+                <span className='ml-2'>In Stock</span>
+            </div>
+            <div>
+                <input
+                    type="checkbox"
+                    name="category"
+                />
+                <span className='ml-2'>On Sale</span>
+            </div>
         </div>
     </div>
   )

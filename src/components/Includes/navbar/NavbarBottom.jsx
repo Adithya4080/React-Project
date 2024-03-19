@@ -16,7 +16,7 @@ function NavbarBottom() {
                     <h4>Trending Products</h4>
                     <div className='flex'>
                         <h4 className='text-red-600 mr-2'>Almost Finished</h4>
-                        <button type="button" class="text-white bg-gradient-to-r from-red-800 via-red-400 to-orange-400  rounded-lg text-xs  text-center py-1 px-2">Sale</button>
+                        <button type="button" className="text-white bg-gradient-to-r from-red-800 via-red-400 to-orange-400  rounded-lg text-xs  text-center py-1 px-2">Sale</button>
                     </div>
                 </div>
             </div>

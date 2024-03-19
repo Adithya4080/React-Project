@@ -30,7 +30,7 @@ const SidebarMiddle = () => {
             <h3 className='font-bold'>Product Categories</h3>
             <ul>
                 {categories.map((category) => (
-                    <li key={category} className="mb-2">
+                    <li key={category} className="mb-2 whitespace-nowrap">
                     <label className="inline-flex items-center">
                         <input
                         type="checkbox"

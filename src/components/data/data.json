@@ -76,7 +76,7 @@
     },
     {
         "id" : 6,
-        "img": "src/assets/images/Products/Bananas",
+        "img": "src/assets/images/Products/Bananas.png",
         "name": "Bananas",
         "title": "Maerketside Fresh Organic Bananas, Bunch",
         "rating": 3,
@@ -151,7 +151,7 @@
     },
     {
         "id" : 11,
-        "img": "src/assets/images/Products/Lemon",
+        "img": "src/assets/images/Products/Lemon.png",
         "name": "Lemon",
         "title": "Fresh Lemon, Each",
         "rating": 2,
