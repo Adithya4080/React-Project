@@ -1,29 +1,23 @@
-import React, {useState} from 'react'
+import React, {useContext} from 'react';
+import { FilterContext } from '../FilterContext';
+
+const categories = [
+    'Fruits',
+    'Vegetables',
+    'Baby & Pregnancy',
+    'Beverages',
+    'Meats & Seafood',
+    'Biscuits & Snacks',
+    'Breads & Bakery',
+    'Breakfast & Dairy',
+    'Frozen Foods',
+    'Grocery & Staples',
+    'Healthcare',
+    'Household Needs'
+]
 
 const SidebarMiddle = () => {
-    const categories = [
-        'Fruits',
-        'Vegetables',
-        'Baby & Pregnancy',
-        'Beverages',
-        'Meats & Seafood',
-        'Biscuits & Snacks',
-        'Breads & Bakery',
-        'Breakfast & Dairy',
-        'Frozen Foods',
-        'Grocery & Staples',
-        'Healthcare',
-        'Household Needs'
-    ]
-    const [selectedCategories, setSelectedCategories] = useState([]);
-
-    const handleCategoryChange = (category) => {
-      if (selectedCategories.includes(category)) {
-        setSelectedCategories(selectedCategories.filter(item => item !== category));
-      } else {
-        setSelectedCategories([...selectedCategories, category]);
-      }
-    };
+    const { selectedCategories, handleCategoryChange } = useContext(FilterContext);
 
     return (
         <div className='my-5 border-b border-gray-300'>

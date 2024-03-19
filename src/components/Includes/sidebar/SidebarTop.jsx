@@ -1,17 +1,13 @@
-import React, {useState} from 'react'
+import React, {useContext} from 'react';
+import { FilterContext } from '../FilterContext';
 
 const Sidebar = () => {
-    const [priceRange, setPriceRange] = useState([0, 30]);
+    const { priceRange, handlePriceRangeChange } = useContext(FilterContext);
 
     const handleSliderChange = (event) => {
-        const newPrice = parseInt(event.target.value);
-        const index = event.target.dataset.index;
-
-        setPriceRange(prevRange => {
-            const updatedRange = [...prevRange];
-            updatedRange[index] = newPrice;
-            return updatedRange;
-        });
+        const minPrice = parseInt(event.target.value);
+        const maxPrice = parseInt(event.target.max);
+        handlePriceRangeChange([minPrice, maxPrice]);
     };
 
     return (
