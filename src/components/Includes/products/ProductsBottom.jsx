@@ -13,7 +13,7 @@ function ProductsBottom() {
                         <CiHeart className='text-xl' />
                     </div>                    
                     <div className='w-full'><img src={items.img} alt={items.name} className='w-full' /></div>
-                    <h3 className='font-bold'>{items.title}</h3>
+                    <h3 className='font-bold text-xm'>{items.title}</h3>
                     <div className='flex justify-normal items-center'>
                         {[...Array(5)].map((_, index) => (
                             <AiFillStar
@@ -23,11 +23,14 @@ function ProductsBottom() {
                         ))}
                         <h6 className='ml-2'>{items.review}</h6>
                     </div>
-                    
-                    <h3>${items.newPrice}</h3>
-                    <del>${items.prevPrice}</del>
-                    <CiShoppingCart />
-                    <h6>{items.stock}</h6>
+                    <div className='flex items-center space-x-3'>                    
+                        <h3 className='font-bold text-xl text-red-500'>${items.newPrice}</h3>
+                        <del className='text-xm font-bold'>${items.prevPrice}</del>
+                    </div>
+                    <div className='flex items-center space-x-5'>
+                        <CiShoppingCart className='bg-green-500 text-3xl text-white p-1' />
+                        <h6 className='text-green-700 font-bold'>{items.stock}</h6>
+                    </div>
                 </div>
             ))}
         </div>

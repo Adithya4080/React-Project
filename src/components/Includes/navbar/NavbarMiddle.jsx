@@ -10,7 +10,7 @@ function NavbarMiddle() {
             <div className='wrapper py-2 flex justify-between'>
                 <div className='flex space-x-2'>
                     <h1>
-                        <img src={'src/assets/images/Logo.png'} alt="" />
+                        <img src={'src/assets/images/Logo.png'} alt="Logo" />
                     </h1>
                     <div className='flex justify-between text-center pt-1'>
                         <FaLocationDot />
