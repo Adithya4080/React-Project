@@ -64,20 +64,20 @@ function FooterMiddle() {
             <div className='space-y-4'>
                 <h4 className='font-bold space-y-2'>Download our app</h4>
                 <div className='flex'>
-                    <img src={'src/assets/images/Google Play.png'} alt="Google Play" />
+                    <img src={'/src/assets/images/Google Play.png'} alt="Google Play" />
                     <small className='ml-2 text-gray-600'>Download App Get <br /> - 10% Discount</small>
                 </div>
                 <div className='flex'>
-                    <img src={'src/assets/images/Apple Store.png'} alt="Apple Store" />
+                    <img src={'/src/assets/images/Apple Store.png'} alt="Apple Store" />
                     <small className='ml-2 text-gray-600'>Download App Get <br /> - 20% Discount</small>
                 </div>
                 <div className='space-y-2'>
                     <h6 className='text-xm text-gray-600'>Follow us on social media:</h6>
                     <div className='flex space-x-3'>
-                        <img src={'src/assets/images/Social/Facebook.png'} alt="Facebook" />
-                        <img src={'src/assets/images/Social/Twitter.png'} alt="Twitter" />
-                        <img src={'src/assets/images/Social/Instagram.png'} alt="Instagram" />
-                        <img src={'src/assets/images/Social/LinkedIn.png'} alt="LinkedIn" />
+                        <img src={'/src/assets/images/Social/Facebook.png'} alt="Facebook" />
+                        <img src={'/src/assets/images/Social/Twitter.png'} alt="Twitter" />
+                        <img src={'/src/assets/images/Social/Instagram.png'} alt="Instagram" />
+                        <img src={'/src/assets/images/Social/LinkedIn.png'} alt="LinkedIn" />
                     </div>
                 </div>
             </div>

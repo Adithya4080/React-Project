@@ -4,6 +4,7 @@ import { AiFillStar } from 'react-icons/ai';
 import { CiShoppingCart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import { FilterContext } from '../FilterContext';
+import { Link } from 'react-router-dom';
 
 
 function ProductsBottom() {
@@ -25,7 +26,7 @@ function ProductsBottom() {
     };
 
     return (
-        <div className='grid grid-cols-5 mt-10'>
+        <div className='grid grid-cols-5 mt-10 cursor-pointer'>
             {filteredProducts.map((items) =>(
                 <div key={items.id} className='border p-2 space-y-2'>
                     <div className='flex justify-between'>
@@ -37,7 +38,7 @@ function ProductsBottom() {
                         />
                     </div>                    
                     <div className='w-full'><img src={items.img} alt={items.name} className='w-full' /></div>
-                    <h3 className='font-bold text-xm'>{items.title}</h3>
+                    <Link key={items.id} to={`/products/${items.id}`}><h3 className='font-bold text-xm'>{items.title}</h3></Link>
                     <div className='flex justify-normal items-center'>
                         {[...Array(5)].map((_, index) => (
                             <AiFillStar
