@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavbarBottom() {
     return (
         <div className='border-2 border-b-yellow-500'>
             <div className="wrapper flex justify-between py-2 font-bold">
                 <div className='flex space-x-4 '>
-                    <h4>Home</h4>
+                    <Link to='/'><h4>Home</h4></Link>
                     <h4>Shop</h4>
                     <h4> Fruits & vegetables</h4>
                     <h4>Beverages</h4>

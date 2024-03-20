@@ -4,6 +4,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { CiSearch} from 'react-icons/ci';
 import { MdShoppingCart } from "react-icons/md";
 import { FilterContext } from '../FilterContext';
+import { Link } from 'react-router-dom';
 
 
 function NavbarMiddle() {
@@ -14,7 +15,9 @@ function NavbarMiddle() {
             <div className='wrapper py-3 flex justify-between'>
                 <div className='flex space-x-2'>
                     <h1>
-                        <img src={'/src/assets/images/Logo.png'} alt="Logo" />
+                        <Link to='/'>
+                            <img src={'/src/assets/images/Logo.png'} alt="Logo" />
+                        </Link>
                     </h1>
                     <div className='flex justify-between text-center pt-1'>
                         <FaLocationDot />
