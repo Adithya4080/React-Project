@@ -2,6 +2,8 @@
     {
         "id" : 1,
         "img": "/src/assets/images/Products/Yellow Potatoes.png",
+        "img2":"/src/assets/images/Products/Yellow Potatoes 2.jpg",
+        "img3":"/src/assets/images/Products/Yellow Potatoes 3.jpg",
         "name": "Yellow Potatoes",
         "title": "Yellow Potatoes Whole Fresh, 5lb Bag",
         "rating": 4.5,
@@ -17,6 +19,8 @@
     {
         "id" : 2,
         "img": "/src/assets/images/Products/Oranges.png",
+        "img2": "/src/assets/images/Products/Oranges 2.jpg",
+        "img3": "/src/assets/images/Products/Oranges 3.jpg",
         "name": "Orange",
         "title": "Large Bagged Oranges",
         "rating": 4,
@@ -32,6 +36,8 @@
     {
         "id" : 3,
         "img": "/src/assets/images/Products/Strawberries.png",
+        "img2": "/src/assets/images/Products/Strawberries 2.jpg",
+        "img3": "/src/assets/images/Products/Strawberries 3.jpg",
         "name": "Strawberry",
         "title": "Strawberries - 1 lb",
         "rating": 4,
@@ -47,6 +53,8 @@
     {
         "id" : 4,
         "img": "/src/assets/images/Products/Sliced Strawberries.png",
+        "img2": "/src/assets/images/Products/Sliced Strawberries 2.jpg",
+        "img3": "/src/assets/images/Products/Sliced Strawberries 3.jpg",
         "name": "Sliced Strawberries",
         "title": "Simple Kitchen FD Sliced Strawberries - 1.08lb",
         "rating": 2.5,
@@ -62,6 +70,8 @@
     {
         "id" : 5,
         "img": "/src/assets/images/Products/Peach.png",
+        "img2": "/src/assets/images/Products/Peach 2.jpg",
+        "img3": "/src/assets/images/Products/Peach 3.jpg",
         "name": "Peach",
         "title": "Peach - each",
         "rating": 3,
@@ -77,8 +87,10 @@
     {
         "id" : 6,
         "img": "/src/assets/images/Products/Bananas.png",
+        "img2": "/src/assets/images/Products/Bananas 2.jpg",
+        "img3": "/src/assets/images/Products/Bananas 3.jpg",
         "name": "Bananas",
-        "title": "Maerketside Fresh Organic Bananas, Bunch",
+        "title": "Marketside Fresh Organic Bananas, Bunch",
         "rating": 3,
         "star": "AiFillStar",
         "review": 3,
@@ -92,6 +104,8 @@
     {
         "id" : 7,
         "img": "/src/assets/images/Products/Spinach & Herb Wrap.png",
+        "img2": "/src/assets/images/Products/Spinach & Herb Wrap 2.jpg",
+        "img3": "/src/assets/images/Products/Spinach & Herb Wrap 3.jpg",
         "name": "Spinach & Herb Wrap",
         "title": "Large Garden Spinach & Herb Wrap Tortillas –…",
         "rating": 4,
@@ -107,6 +121,8 @@
     {
         "id" : 8,
         "img": "/src/assets/images/Products/Caramel Apple.png",
+        "img2": "/src/assets/images/Products/Caramel Apple 2.jpg",
+        "img3": "/src/assets/images/Products/Caramel Apple 3.jpg",
         "name": "Caramel Apple",
         "title": "Halloween Harvest Caramel Apple Soft Caramels –…",
         "rating": 3,
@@ -122,6 +138,8 @@
     {
         "id" : 9,
         "img": "/src/assets/images/Products/Eggplant.png",
+        "img2": "/src/assets/images/Products/Eggplant 2.jpg",
+        "img3": "/src/assets/images/Products/Eggplant 3.jpg",
         "name": "Eggplant",
         "title": "Fresh Purple Eggplant",
         "rating": 4,
@@ -137,6 +155,8 @@
     {
         "id" : 10,
         "img": "/src/assets/images/Products/Pomegranate.png",
+        "img2": "/src/assets/images/Products/Pomegranate 2.jpg",
+        "img3": "/src/assets/images/Products/Pomegranate 3.jpg",
         "name": "Pomegranate",
         "title": "Fresh Pomegranate, Each",
         "rating": 4,
@@ -152,6 +172,8 @@
     {
         "id" : 11,
         "img": "/src/assets/images/Products/Lemon.png",
+        "img2": "/src/assets/images/Products/Lemon 2.jpg",
+        "img3": "/src/assets/images/Products/Lemon 3.jpg",
         "name": "Lemon",
         "title": "Fresh Lemon, Each",
         "rating": 2,
@@ -167,6 +189,8 @@
     {
         "id" : 12,
         "img": "/src/assets/images/Products/Cauliflower.png",
+        "img2": "/src/assets/images/Products/Cauliflower 2.jpg",
+        "img3": "/src/assets/images/Products/Cauliflower 3.jpg",
         "name": "Cauliflower",
         "title": "Fresh Cauliflower, Each",
         "rating": 3,
@@ -182,6 +206,8 @@
     {
         "id" : 13,
         "img": "/src/assets/images/Products/Broccoli.png",
+        "img2": "/src/assets/images/Products/Broccoli 2.jpg",
+        "img3": "/src/assets/images/Products/Broccoli 3.jpg",
         "name": "Broccoli",
         "title": "Fresh Broccoli, Each",
         "rating": 4,
@@ -197,6 +223,8 @@
     {
         "id" : 14,
         "img": "/src/assets/images/Products/Blackberries.png",
+        "img2": "/src/assets/images/Products/Blackberries 2.jpg",
+        "img3": "/src/assets/images/Products/Blackberries 3.jpg",
         "name": "Blackberries",
         "title": "Blackberries - 6oz",
         "rating": 4,
@@ -212,6 +240,8 @@
     {
         "id" : 15,
         "img": "/src/assets/images/Products/Salted Caramel.png",
+        "img2": "/src/assets/images/Products/Salted Caramel 2.jpg",
+        "img3": "/src/assets/images/Products/Salted Caramel 3.jpg",
         "name": "Salted Caramel",
         "title": "30g Protein Shake - Salted Caramel - 11 fl oz-4pk",
         "rating": 4.5,
@@ -227,6 +257,8 @@
     {
         "id" : 16,
         "img": "/src/assets/images/Products/Apple.png",
+        "img2":"/src/assets/images/Products/Apple 2.jpg",
+        "img3":"/src/assets/images/Products/Apple 3.jpg",
         "name": "Apple",
         "title": "Fresh Granny Smith Apple, Each",
         "rating": 5,
