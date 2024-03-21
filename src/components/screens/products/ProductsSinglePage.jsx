@@ -8,18 +8,20 @@ import Navbar from '../../Includes/navbar/Navbar';
 import Footer from '../../Includes/footer/Footer';
 import ReactImageMagnify from 'react-image-magnify';
 import Button from '../../general/Button';
+import RelatedProducts from '../../Includes/RelatedProducts';
 
 function ProductsSinglePage() {
     const { id } = useParams();
     const parseId = parseInt(id);
     const product = products.find(item => item.id === parseId);
 
+    // Images
     const [selectedImage, setSelectedImage] = useState(product.img2);
-
     const handleImageClick = (img) => {
         setSelectedImage(img)
     }
 
+    // Timer
     const [time, setTime] = useState({ days: 81, hours: 6, minutes: 50, seconds: 2 });
     useEffect(() => {
         const interval = setInterval(() => {
@@ -36,12 +38,11 @@ function ProductsSinglePage() {
         return () => clearInterval(interval);
     },[time]);
 
+    // Counter
     const [count, setCount] = useState(0);
-
     const increment = () => {
         setCount(count + 1);
     };
-
     const decrement = () => {
         if (count > 0) {
             setCount(count - 1)
@@ -149,9 +150,9 @@ function ProductsSinglePage() {
                             <p className=''>Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.</p>
                             <p>Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend nunc a, lobortis neque. Praesent aliquam dignissim viverra Maecenas lacus odio, feugiat eu nunc sit amet,maximus sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam utarcu pharetra dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam, sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sedegestas purus commodovel.</p>
                         </div>
-                        <div className='pt-10'>
-                            <h4 className='font-bold'>Related Products</h4>
-                        </div>
+                    </div>
+                    <div>
+                        <RelatedProducts category={product.category} wishlist={[]} addToWishlist={() => {}} removeFromWishlist={() => {}} />
                     </div>
                 </div>
             <Footer />
