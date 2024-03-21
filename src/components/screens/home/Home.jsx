@@ -4,10 +4,14 @@ import Navbar from '../../Includes/navbar/Navbar';
 import Products from '../../Includes/products/Products';
 import Sidebar from '../../Includes/sidebar/Sidebar';
 import Footer from '../../Includes/footer/Footer';
+import { Helmet } from 'react-helmet';
 
 function Home() {
     return (
         <>
+            <Helmet>
+                <title>Home | Grogin</title>
+            </Helmet>
             <PromptBar />
             <Navbar />
             <div className='wrapper flex space-x-10 py-10'>

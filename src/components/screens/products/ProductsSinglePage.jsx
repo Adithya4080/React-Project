@@ -9,6 +9,8 @@ import Footer from '../../Includes/footer/Footer';
 import ReactImageMagnify from 'react-image-magnify';
 import Button from '../../general/Button';
 import RelatedProducts from '../../Includes/RelatedProducts';
+import { Helmet } from 'react-helmet';
+import Products from '../../Includes/products/Products';
 
 function ProductsSinglePage() {
     const { id } = useParams();
@@ -51,6 +53,9 @@ function ProductsSinglePage() {
 
     return (
         <div>
+            <Helmet>
+                <title>{product.title} | Grogin</title>
+            </Helmet>
             <Navbar />
                 <div className='wrapper py-10'>
                     <div className="top flex justify-between w-full cursor-pointer">
