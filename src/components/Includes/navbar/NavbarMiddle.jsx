@@ -42,7 +42,7 @@ function NavbarMiddle() {
                 <div className='flex space-x-4 items-center whitespace-nowrap cursor-pointer'>
                     <div className="flex flex-col items-center" onClick={toggleLoginPrompt}>
                         <FaUser className="text-2xl" />
-                        <h4 className="text-sm">Account</h4>
+                        <h4 className="text-sm">Sign In</h4>
                     </div>
                     <div className="flex flex-col items-center">
                         <FaRegHeart className="text-2xl" />
