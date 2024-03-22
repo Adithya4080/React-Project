@@ -4,7 +4,7 @@ import ProductsBottom from './ProductsBottom';
 
 function Products() {
     return (
-        <div>
+        <div className='w-full'>
             <ProductsTop />
             <ProductsBottom />
         </div>
