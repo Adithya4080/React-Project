@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { FilterContext } from '../FilterContext';
 
 const Sidebar = () => {
-    const { priceRange, handlePriceRangeChange } = useContext(FilterContext);
+    const { priceRange, handlePriceRangeChange, products } = useContext(FilterContext);
 
     const handleSliderChange = (event) => {
         const minPrice = parseInt(event.target.value);
@@ -31,7 +31,7 @@ const Sidebar = () => {
                     max="30"
                     value={priceRange[0]}
                     onChange={handleSliderChange}
-                    className="slider h-2"
+                    className="w-full"
                     id="price-slider"
                     data-index={0}
                 />
