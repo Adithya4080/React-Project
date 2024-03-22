@@ -21,24 +21,24 @@ function SignUp() {
         setMessage("")
         e.preventDefault();
         axios
-        .post("https://traveller.talrop.works/api/v1/auth/register/",{email, password, name})
-        .then((response) => {
-            let data = response.data.data;
-            let status_code = response.data.Statuscode;
-            if (status_code === 6000) {
-                console.log(response.data);
-                localStorage.setItem("user_data", JSON.stringify(data));
-                updateUserData({ type: "LOGIN", payload: data })
-                navigate("/auth/login")
-            } else {
-                setMessage(response.data.message)
-            }
-        }).catch (error => {
-            console.log(error.response);
-            if (error.response.status === 401) {
-                setMessage(error.response.data.detail)
-            }
-        })
+            .post("https://traveller.talrop.works/api/v1/auth/register/",{email, password, name})
+            .then((response) => {
+                let data = response.data.data;
+                let status_code = response.data.StatusCode;
+                if (status_code === 6000) {
+                    console.log(response.data);
+                    localStorage.setItem("user_data", JSON.stringify(data));
+                    updateUserData({ type: "LOGIN", payload: data })
+                    navigate("/auth/login");
+                }else{
+                    setMessage(response.data.message)
+                }
+            }).catch (error =>{
+                console.log(error.response);
+                if (error.response.status === 401) {
+                    setMessage(error.response.data.detail)
+                }
+            })
     }
     return (
         <div>
