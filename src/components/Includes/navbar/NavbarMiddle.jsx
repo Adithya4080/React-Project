@@ -7,6 +7,8 @@ import { FilterContext } from '../FilterContext';
 import { Link } from 'react-router-dom';
 import LoginPrompt from '../../screens/login/LoginPrompt';
 import { Store } from '../../context/Store';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function NavbarMiddle() {
@@ -18,6 +20,15 @@ function NavbarMiddle() {
     const { userData, updateUserData } = useContext(Store)
     const handleLogout = () => {
         updateUserData({ type: "LOGOUT" });
+        toast.success("Logged out successfully!", {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined
+        });
     }
 
     return (
@@ -51,8 +62,7 @@ function NavbarMiddle() {
                             <h4 className="text-sm" onClick={() => handleLogout()}>Logout</h4>
                         ):(
                             <h4 className="text-sm" onClick={toggleLoginPrompt}>Sign In</h4>
-                        )}
-                            
+                        )}                            
                     </div>
                     <div className="flex flex-col items-center">
                         <FaRegHeart className="text-2xl" />

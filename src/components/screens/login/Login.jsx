@@ -6,6 +6,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import PromptBar from '../../Includes/PromptBar';
 import axios from 'axios';
 import { Store } from '../../context/Store';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
     const [username, setUsername] = useState("");
@@ -25,6 +27,16 @@ function Login() {
             let data = response.data;
             localStorage.setItem("user_data", JSON.stringify(data));
             updateUserData({ type:"LOGIN",payload: data })
+            toast.success("Logged in Successful!", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark"
+            });
             navigate("/")
         }).catch(error => {
             if (error.response.status === 401) {
