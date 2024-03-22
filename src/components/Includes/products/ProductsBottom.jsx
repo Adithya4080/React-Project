@@ -28,7 +28,7 @@ function ProductsBottom() {
     return (
         <>
         {filteredProducts.length === 0 && (
-                <p>No products in the selected price range.</p>
+                <p className='font-bold'>No products in the selected price range.</p>
         )}
         <div className='grid grid-cols-5 mt-10 cursor-pointer'>
             {filteredProducts.map((items) =>(

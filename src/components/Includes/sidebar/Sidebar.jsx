@@ -6,7 +6,7 @@ import SidebarBottom from '../sidebar/SidebarBottom';
 
 function Sidebar() {
     return (
-        <div className='w-2/12'>
+        <div>
             <SidebarTop />  
             <SidebarMiddle />
             <SidebarBottom />      

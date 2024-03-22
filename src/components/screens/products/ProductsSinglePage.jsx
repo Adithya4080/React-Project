@@ -10,7 +10,6 @@ import ReactImageMagnify from 'react-image-magnify';
 import Button from '../../general/Button';
 import RelatedProducts from '../../Includes/RelatedProducts';
 import { Helmet } from 'react-helmet';
-import Products from '../../Includes/products/Products';
 
 function ProductsSinglePage() {
     const { id } = useParams();
