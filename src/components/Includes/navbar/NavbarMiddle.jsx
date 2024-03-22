@@ -5,8 +5,8 @@ import { CiSearch} from 'react-icons/ci';
 import { MdShoppingCart } from "react-icons/md";
 import { FilterContext } from '../FilterContext';
 import { Link } from 'react-router-dom';
-import Button from '../../general/Button';
 import LoginPrompt from '../../screens/login/LoginPrompt';
+import { Store } from '../../context/Store';
 
 
 function NavbarMiddle() {
@@ -14,6 +14,11 @@ function NavbarMiddle() {
     const [showLoginPrompt, setShowLoginPrompt] = useState(false);
 
     const toggleLoginPrompt = () => setShowLoginPrompt(!showLoginPrompt)
+
+    const { userData, updateUserData } = useContext(Store)
+    const handleLogout = () => {
+        updateUserData({ type: "LOGOUT" });
+    }
 
     return (
         <div className='border border-b-gray-400 sticky top-0 z-10 bg-white'>
@@ -40,9 +45,14 @@ function NavbarMiddle() {
                     <CiSearch className='text-black text-2xl' />
                 </div>
                 <div className='flex space-x-4 items-center whitespace-nowrap cursor-pointer'>
-                    <div className="flex flex-col items-center" onClick={toggleLoginPrompt}>
+                    <div className="flex flex-col items-center" >
                         <FaUser className="text-2xl" />
-                        <h4 className="text-sm">Sign In</h4>
+                        {userData ? (
+                            <h4 className="text-sm" onClick={() => handleLogout()}>Logout</h4>
+                        ):(
+                            <h4 className="text-sm" onClick={toggleLoginPrompt}>Sign In</h4>
+                        )}
+                            
                     </div>
                     <div className="flex flex-col items-center">
                         <FaRegHeart className="text-2xl" />
