@@ -2,7 +2,7 @@ import React from 'react'
 
 function FooterBottom() {
     return (
-        <div className='flex justify-between py-10'>
+        <div className='flex flex-wrap justify-between py-10 space-y-4'>
             <div>
                 <p className='text-gray-600'>Copyright 2024 © Grogin WooCommerce WordPress Theme. All right reserved. Powered by KLBTheme.</p>
                 <div className='flex space-x-2 items-center w-16 mt-5'>
