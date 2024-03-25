@@ -14,7 +14,7 @@ function Home() {
             </Helmet>
             <PromptBar />
             <Navbar />
-            <div className='wrapper flex space-x-10 py-10'>
+            <div className='wrapper flex space-x-0  py-10'>
                 <Sidebar />
                 <Products />                
             </div>

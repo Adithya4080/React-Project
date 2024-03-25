@@ -6,10 +6,12 @@ import SidebarBottom from '../sidebar/SidebarBottom';
 
 function Sidebar() {
     return (
-        <div>
-            <SidebarTop />  
-            <SidebarMiddle />
-            <SidebarBottom />      
+        <div className='hidden md:block'>
+            <div className='mr-10'>
+                <SidebarTop />  
+                <SidebarMiddle />
+                <SidebarBottom />    
+            </div>  
         </div>
     )
 }

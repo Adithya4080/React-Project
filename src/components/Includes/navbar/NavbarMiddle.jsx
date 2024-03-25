@@ -40,9 +40,11 @@ function NavbarMiddle() {
                             <img src={'/src/assets/images/Logo.png'} alt="Logo" />
                         </Link>
                     </h1>
-                    <div className='flex justify-between text-center pt-1'>
-                        <FaLocationDot />
-                        <span>Deliver to all</span>
+                    <div className='hidden md:block'>
+                        <div className='flex justify-between text-center pt-1'>
+                            <FaLocationDot />
+                            <span>Deliver to all</span>
+                        </div>
                     </div>
                 </div>
                 <div className='flex flex-grow items-center bg-gray-100 h-9 px-2 rounded-md mx-4'>
@@ -69,10 +71,12 @@ function NavbarMiddle() {
                         <h4 className="text-sm">Wishlist</h4>
                         <span className="text-sm absolute top-0 ml-7 bg-red-700 text-white px-1 rounded-lg text-center">{wishlist.length}</span>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <MdShoppingCart className="text-2xl" />
-                        <h4 className="text-sm">Your Cart</h4>
-                        <span className="text-sm absolute top-0 ml-5 bg-red-700 text-white px-1 rounded-lg text-center">0</span>
+                    <div className='hidden md:block'>
+                        <div className="flex flex-col items-center">
+                            <MdShoppingCart className="text-2xl" />
+                            <h4 className="text-sm">Your Cart</h4>
+                            <span className="text-sm absolute top-0 ml-5 bg-red-700 text-white px-1 rounded-lg text-center">0</span>
+                        </div>
                     </div>
                 </div>
             </div>

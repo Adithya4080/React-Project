@@ -1,16 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { FilterContext } from '../FilterContext';
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import FilterPanel from '../FilterPanel';
 
-function ProductsTop() {
+function ProductsTop({}) {
     const { selectedCategories, handleCategoryChange } = useContext(FilterContext);
+    const [isFilterPanelOpen, setIsFilterPanelOpen] = useState(false);
 
     const handleCategoryClose = (category) => {
-        handleCategoryChange(category); // Deselect the category
+        handleCategoryChange(category); 
     };
+
+    const toggleFilterPanel = () => {
+        setIsFilterPanelOpen(!isFilterPanelOpen);
+    };
+
 
     return (
         <>
+        <div>
+            <button onClick={toggleFilterPanel} className='md:hidden border border-blackc mb-5'>Filters</button>
+        </div>
+        <FilterPanel isOpen={isFilterPanelOpen} toggleFilterPanel={toggleFilterPanel} />
         <div style={{ backgroundImage: 'url(src/assets/images/Banner.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="p-8 space-y-2">
                 <button className='border bg-orange-200 font-semibold text-xs p-1 rounded-md text-amber-950 mb-3'>Only this week</button>

@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavbarBottom() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <div className='border-2 border-b-yellow-500'>
-            <div className="wrapper flex justify-between py-2 font-bold">
-                <div className='flex space-x-4 '>
-                    <Link to='/'><h4>Home</h4></Link>
-                    <h4>Shop</h4>
-                    <h4> Fruits & vegetables</h4>
-                    <h4>Beverages</h4>
-                    <h4>Blog</h4>
-                    <h4>Contact</h4>
+            <div className="wrapper flex justify-between py-2 font-bold whitespace-nowrap">
+                <div className='hidden sm:block'>              
+                    <div className='flex space-x-4'>
+                        <Link to='/'><h4>Home</h4></Link>
+                        <h4>Shop</h4>
+                        <h4> Fruits & vegetables</h4>
+                        <h4>Beverages</h4>
+                        <h4>Blog</h4>
+                        <h4>Contact</h4>
+                    </div>
                 </div>
                 <div className='hidden lg:block'>
                     <div className='flex space-x-4'>
@@ -22,7 +30,24 @@ function NavbarBottom() {
                         </div>
                     </div>
                 </div>
+                <div className='sm:hidden'>
+                    <button onClick={toggleMenu} className='text-xl'>
+                        &#9776;
+                    </button>
+                </div>
             </div>
+            {isOpen && (
+                <div className='md:hidden'>
+                    <div className='wrapper flex flex-col space-y-2 font-bold my-4'>
+                        <Link to='/'><h4>Home</h4></Link>
+                        <h4>Shop</h4>
+                        <h4> Fruits & vegetables</h4>
+                        <h4>Beverages</h4>
+                        <h4>Blog</h4>
+                        <h4>Contact</h4>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
