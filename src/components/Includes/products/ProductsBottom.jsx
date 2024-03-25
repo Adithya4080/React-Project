@@ -30,7 +30,7 @@ function ProductsBottom() {
         {filteredProducts.length === 0 && (
                 <p className='font-bold'>No products in the selected price range.</p>
         )}
-        <div className='grid grid-cols-5 mt-10 cursor-pointer'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 md:grid-cols-3 mt-10 cursor-pointer'>
             {filteredProducts.map((items) =>(
                 <div key={items.id} className='border p-2 space-y-2'>
                     <div className='flex justify-between'>

@@ -4,7 +4,7 @@ import { CiMail } from "react-icons/ci";
 
 function FooterMiddle() {
     return (
-        <div className='py-10 flex justify-between border-b border-b-gray-400'>
+        <div className='py-10 flex flex-wrap space-y-2 justify-between border-b border-b-gray-400'>
             <div className='space-y-4'>
                 <h4 className='font-bold'>Do You Need Help ?</h4>
                 <p className='text-xm text-gray-600'>Autoseligen syr. Nek diarask fröbomba. Nör <br /> antipol kynoda nynat. Pressa fåmoska.</p>

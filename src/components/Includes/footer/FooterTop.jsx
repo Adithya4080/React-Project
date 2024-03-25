@@ -2,7 +2,7 @@ import React from 'react';
 
 function FooterTop() {
     return (
-        <div className='flex justify-between border-b border-b-gray-400 pb-10'>
+        <div className='flex flex-wrap space-y-1 justify-between border-b border-b-gray-400 pb-10'>
             <div>
                 <h4 className='font-bold text-xl'>Join our newsletter for £10 offs</h4>
                 <small className='text-gray-600'>Register now to get latest updates on promotions & <br />coupons. Don't worry, we not spam!</small>

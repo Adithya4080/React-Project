@@ -48,7 +48,7 @@ const PromptBar = () => {
     }, []);
     
     return (
-        <div className='bg-purple-400 text-white py-2'>
+        <div className='bg-purple-400 text-white py-2 hidden lg:block'>
             <div className="wrapper flex justify-evenly">
                 <div>
                     <p className='font-bold'>Free delivery & 40% Discount for next 3 orders! Place your 1st order in.</p>
