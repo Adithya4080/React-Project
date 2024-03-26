@@ -52,7 +52,7 @@ function Login() {
             <PromptBar />
             <div className='border-b-2 border-b-yellow-600'>
                 <div className='wrapper items-center flex flex-col justify-center space-x-1'>
-                    <div className='pt-5 '>
+                    <div className='pt-5'>
                         <h1><img src={'/src/assets/images/Logo.png'} alt="Logo" /></h1>
                     </div>
                     <div>
@@ -62,7 +62,7 @@ function Login() {
             </div>
             <div className='py-20 wrapper'>
                 <div className='flex justify-center items-center  text-white'>
-                    <div className='bg-black p-6 rounded-md space-y-4 w-5/12'>
+                    <div className='bg-black p-6 rounded-md space-y-4 w-full md:w-5/12'>
                         <h2 className='font-bold text-2xl flex justify-center items-center'>Login</h2>
                         <form onSubmit={handleSubmit}>
                             <div>

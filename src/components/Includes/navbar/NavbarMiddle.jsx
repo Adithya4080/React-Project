@@ -59,7 +59,7 @@ function NavbarMiddle() {
                 </div>
                 <div className='flex space-x-4 items-center whitespace-nowrap cursor-pointer'>
                     <div className="flex flex-col items-center" >
-                        <FaUser className="text-2xl" />
+                        <FaUser className="text-lg md:text-2xl" />
                         {userData ? (
                             <h4 className="text-sm" onClick={() => handleLogout()}>Logout</h4>
                         ):(
@@ -67,7 +67,7 @@ function NavbarMiddle() {
                         )}                            
                     </div>
                     <div className="flex flex-col items-center">
-                        <FaRegHeart className="text-2xl" />
+                        <FaRegHeart className="text-lg md:text-2xl" />
                         <h4 className="text-sm">Wishlist</h4>
                         <span className="text-sm absolute top-0 ml-7 bg-red-700 text-white px-1 rounded-lg text-center">{wishlist.length}</span>
                     </div>

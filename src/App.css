@@ -8,3 +8,11 @@
       flex-direction: column;
   }
 }
+@media (max-width: 640px) {
+  .right h2{
+    font-size: 20px;
+  }
+  .bottom p{
+    font-size: 14px;
+  }
+}

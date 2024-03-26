@@ -57,8 +57,8 @@ function SignUp() {
                 </div>
             </div>
             <div className='py-20 wrapper'>
-                <div className='flex justify-center items-center  text-white'>
-                    <div className='bg-black p-6 rounded-md space-y-4 w-5/12'>
+                <div className='flex justify-center items-center text-white'>
+                    <div className='bg-black p-6 rounded-md space-y-4 w-full md:w-5/12'>
                         <h2 className='font-bold text-2xl flex justify-center items-center'>Signup</h2>
                         <form onSubmit={handleSubmit}>
                             <div>

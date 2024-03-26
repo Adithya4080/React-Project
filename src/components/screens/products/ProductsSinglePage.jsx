@@ -98,18 +98,20 @@ function ProductsSinglePage() {
                             <div>
                                 <Button text='Order on WhatsApp' className='font-bold' />
                             </div>
-                            <div className="flex items-center bg-orange-300 p-4 rounded-lg">
-                                <span className="text-red-500 font-bold">Special Offer :</span>
-                                <div className="flex items-center ml-4">
-                                    {Object.keys(time).map((unit) => (
-                                    <div key={unit} className="flex flex-col items-center mx-2">
-                                        <span className="bg-white p-2 rounded-lg text-orange-800 text-xl font-bold">{String(time[unit]).padStart(2,'0')}</span>
+                            <div className='hidden sm:block'>
+                                <div className="flex items-center bg-orange-300 p-4 rounded-lg">
+                                    <span className="text-red-500 font-bold">Special Offer :</span>
+                                    <div className="flex items-center ml-4">
+                                        {Object.keys(time).map((unit) => (
+                                        <div key={unit} className="flex flex-col items-center mx-2">
+                                            <span className="bg-white p-2 rounded-lg text-orange-800 text-xl font-bold">{String(time[unit]).padStart(2,'0')}</span>
+                                        </div>
+                                        ))}
                                     </div>
-                                    ))}
+                                    <span className="text-gray-500 font-bold ml-4">Remains until the end of the offer.</span>
                                 </div>
-                                <span className="text-gray-500 font-bold ml-4">Remains until the end of the offer.</span>
                             </div>
-                            <div className='flex space-x-2'>
+                            <div className='flex flex-wrap space-x-2 space-y-2'>
                                 <div className='flex items-center border-2 rounded-sm'>
                                     <button onClick={decrement} className=" px-4 py-1 rounded-l-md">-</button>
                                     <div className=" py-1 px-2 text-center">{count}</div>
@@ -132,17 +134,17 @@ function ProductsSinglePage() {
                                     <p className='text-gray-500'><span className='font-bold'>Warranty.</span> The Consumer Protection Act does not provide for the return of this product of proper quality.</p>
                                 </div>
                             </div>
-                            <div className='flex space-x-6 cursor-pointer'>
+                            <div className='flex flex-wrap space-x-6 space-y-2 cursor-pointer'>
                                 <div className='flex items-center space-x-2'>
                                     <IoHeartOutline className='border p-1 text-3xl' />
                                     <small className='font-bold'>Add to Wishlist</small>
                                 </div>
                                 <div className='flex items-center space-x-2'>
-                                    <IoShareOutline  className='border p-1 text-3xl' />
+                                    <IoShareOutline  className='border p-1 text-2xl' />
                                     <small className='font-bold'>Share this Product</small>
                                 </div>
                                 <div className='flex items-center space-x-2'>
-                                    <IoGitCompare className='border p-1 text-3xl' />
+                                    <IoGitCompare className='border p-1 text-2xl' />
                                     <small className='font-bold'>Compare</small>
                                 </div>
                             </div>
@@ -151,7 +153,7 @@ function ProductsSinglePage() {
                     <div className="bottom py-10">
                         <div className='space-y-5'>
                             <h4 className='font-bold border-b border-b-gray-300'>Description</h4>
-                            <p className=''>Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.</p>
+                            <p>Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.</p>
                             <p>Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend nunc a, lobortis neque. Praesent aliquam dignissim viverra Maecenas lacus odio, feugiat eu nunc sit amet,maximus sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam utarcu pharetra dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam, sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sedegestas purus commodovel.</p>
                         </div>
                     </div>
