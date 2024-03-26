@@ -58,7 +58,7 @@ const PromptBar = () => {
                     {timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0 ? (
                         <p>Sale Has Ended!</p>
                     ):(
-                        <div className="flex  space-x-4 ml-2">
+                        <div className="flex space-x-4 ml-2">
                             <span>{timeLeft.days} days</span>
                             <span>{timeLeft.hours} hours</span>
                             <span>{timeLeft.minutes} minutes</span>

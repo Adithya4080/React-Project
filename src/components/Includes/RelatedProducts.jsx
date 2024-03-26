@@ -48,7 +48,7 @@ function RelatedProducts({ category, wishlist, addToWishlist, removeFromWishlist
                             ))}
                             <h6 className='ml-2'>{item.review}</h6>
                         </div>
-                        <div className='flex item-center space-x-3'>                    
+                        <div className='flex flex-wrap item-center space-x-3'>                    
                             <h3 className='font-bold text-xl text-red-500'>${item.newPrice}</h3>
                             <del className='text-xm font-bold'>${item.prevPrice}</del>
                         </div>

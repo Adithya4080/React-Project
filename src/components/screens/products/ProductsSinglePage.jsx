@@ -111,8 +111,8 @@ function ProductsSinglePage() {
                                     <span className="text-gray-500 font-bold ml-4">Remains until the end of the offer.</span>
                                 </div>
                             </div>
-                            <div className='flex flex-wrap space-x-2 space-y-2'>
-                                <div className='flex items-center border-2 rounded-sm'>
+                            <div className='flex space-x-0 min-[420px]:space-x-2 max-[420px]:flex-col space-y-2'>
+                                <div className='flex justify-center items-center border-2 rounded-sm flex-shrink-0'>
                                     <button onClick={decrement} className=" px-4 py-1 rounded-l-md">-</button>
                                     <div className=" py-1 px-2 text-center">{count}</div>
                                     <button onClick={increment} className=" px-4 py-1 rounded-r-md">+</button>
@@ -126,25 +126,25 @@ function ProductsSinglePage() {
                             </div>
                             <div className='border rounded-md'>
                                 <div className='flex space-x-10 items-center py-1 px-4 border-b'>
-                                    <FiCreditCard className='text-2xl font-bold'/>
-                                    <p className='text-gray-500'><span className='font-bold'>Payment.</span> Payment upon receipt of goods, Payment by card in the department, Google Pay,Online card, -5% discount in case of payment</p>
+                                    <FiCreditCard className='text-2xl font-bold max-[420px]:text-4xl'/>
+                                    <p className='text-gray-500 max-[420px]:text-xs '><span className='font-bold'>Payment.</span> Payment upon receipt of goods, Payment by card in the department, Google Pay,Online card, -5% discount in case of payment</p>
                                 </div>
                                 <div className='flex space-x-9 items-center py-1 px-4'>
-                                    <IoShieldCheckmarkOutline className='text-2xl font-bold'/>
-                                    <p className='text-gray-500'><span className='font-bold'>Warranty.</span> The Consumer Protection Act does not provide for the return of this product of proper quality.</p>
+                                    <IoShieldCheckmarkOutline className='text-2xl font-bold max-[420px]:text-4xl'/>
+                                    <p className='text-gray-500 max-[420px]:text-xs'><span className='font-bold'>Warranty.</span> The Consumer Protection Act does not provide for the return of this product of proper quality.</p>
                                 </div>
                             </div>
-                            <div className='flex flex-wrap space-x-6 space-y-2 cursor-pointer'>
+                            <div className='flex flex-wrap space-x-0 min-[420px]:space-x-6 space-y-2 cursor-pointer'>
                                 <div className='flex items-center space-x-2'>
                                     <IoHeartOutline className='border p-1 text-3xl' />
                                     <small className='font-bold'>Add to Wishlist</small>
                                 </div>
                                 <div className='flex items-center space-x-2'>
-                                    <IoShareOutline  className='border p-1 text-2xl' />
+                                    <IoShareOutline  className='border p-1 text-3xl' />
                                     <small className='font-bold'>Share this Product</small>
                                 </div>
                                 <div className='flex items-center space-x-2'>
-                                    <IoGitCompare className='border p-1 text-2xl' />
+                                    <IoGitCompare className='border p-1 text-3xl' />
                                     <small className='font-bold'>Compare</small>
                                 </div>
                             </div>
