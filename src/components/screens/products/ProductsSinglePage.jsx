@@ -57,8 +57,8 @@ function ProductsSinglePage() {
             </Helmet>
             <Navbar />
                 <div className='wrapper py-10'>
-                    <div className="top flex justify-between w-full cursor-pointer">
-                        <div className="left w-5/12">
+                    <div className="top flex justify-between w-full flex-col md:flex-row cursor-pointer">
+                        <div className="left w-full md:w-5/12">
                             <ReactImageMagnify {...{
                                 smallImage: {
                                     alt: product.name,
@@ -76,7 +76,7 @@ function ProductsSinglePage() {
                                 <img src={product.img3} alt={product.name} onClick={() => handleImageClick(product.img3)} className='border border-red-500' />
                             </div>
                         </div>
-                        <div className="right space-y-4 w-7/12">
+                        <div className="right space-y-4 w-full md:w-7/12">
                             <h2 className='font-bold text-4xl'>{product.title}</h2>
                             <div className='flex justify-normal items-center border-b border-b-gray-600'>
                                 {[...Array(5)].map((_, index) => (

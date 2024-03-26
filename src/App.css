@@ -3,3 +3,8 @@
   margin: 0 auto;
   max-width: 1280px;
 }
+@media (min-width: 640px) {
+  .top {
+      flex-direction: column;
+  }
+}
