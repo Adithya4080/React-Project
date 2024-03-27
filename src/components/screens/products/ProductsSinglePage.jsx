@@ -112,7 +112,7 @@ function ProductsSinglePage() {
                                 </div>
                             </div>
                             <div className='flex space-x-0 min-[420px]:space-x-2 max-[420px]:flex-col space-y-2'>
-                                <div className='flex justify-center items-center border-2 rounded-sm flex-shrink-0'>
+                                <div className='flex justify-center items-center border-2 rounded-sm'>
                                     <button onClick={decrement} className=" px-4 py-1 rounded-l-md">-</button>
                                     <div className=" py-1 px-2 text-center">{count}</div>
                                     <button onClick={increment} className=" px-4 py-1 rounded-r-md">+</button>
