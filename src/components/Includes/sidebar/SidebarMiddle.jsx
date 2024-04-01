@@ -20,7 +20,7 @@ const SidebarMiddle = () => {
     const { selectedCategories, handleCategoryChange } = useContext(FilterContext);
 
     return (
-        <div className='my-5 border-b border-gray-300'>
+        <div className='pt-3 pb-5 border-b border-gray-300'>
             <h3 className='font-bold'>Product Categories</h3>
             <ul>
                 {categories.map((category) => (

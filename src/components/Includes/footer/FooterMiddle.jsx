@@ -1,6 +1,8 @@
 import React from 'react';
 import { MdPhoneInTalk } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function FooterMiddle() {
     return (
@@ -26,58 +28,74 @@ function FooterMiddle() {
             <div className='space-y-4'>
                 <h4 className='font-bold'>Make Money with Us</h4>
                 <ul className='text-xs text-gray-600 space-y-2'>
-                    <li>Sell on Grodin</li>
-                    <li>Sell Your Services on Grogin</li>
-                    <li>Sell on Grogin Business</li>
-                    <li>Sell Your Apps on Grogin</li>
-                    <li>Became an Affliate</li>
-                    <li>Advertise Your Products</li>
-                    <li>Self-Publish with Us</li>
-                    <li>Become an Blowwe Vendor</li>
+                    <li><a href="#">Sell on Grodin</a></li>
+                    <li><a href="#">Sell Your Services on Grogin</a></li>
+                    <li><a href="#">Sell on Grogin Business</a></li>
+                    <li><a href="#">Sell Your Apps on Grogin</a></li>
+                    <li><a href="#">Became an Affliate</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                    <li><a href="#">Self-Publish with Us</a></li>
+                    <li><a href="#">Become an Blowwe Vendor</a></li>
                 </ul>
             </div>
             <div className='space-y-4'>
                 <h4 className='font-bold space-y-2'>Let Us Help You</h4>
                 <ul className='text-xs text-gray-600 space-y-2'>
-                    <li>Accessibility Statement</li>
-                    <li>Your Orders</li>
-                    <li>Returns & Replacements</li>
-                    <li>Shipping Rates & Policies</li>
-                    <li>Privacy Policy</li>
-                    <li>Terms and Conditions</li>
-                    <li>Cookie Settings</li>
-                    <li>Help Center</li>
+                    <li><a href="#">Accessibility Statement</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Returns & Replacements</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Cookie Settings</a></li>
+                    <li><a href="#">Help Center</a></li>
                 </ul>
             </div>
             <div className='space-y-4'>
                 <h4 className='font-bold space-y-2'>Get to Know Us</h4>
                 <ul className='text-xs text-gray-600 space-y-2'>
-                    <li>Careers for Grodin</li>
-                    <li>About Grogin</li>
-                    <li>Investor Relations</li>
-                    <li>Grogin Devices</li>
-                    <li>Customer reviews</li>
-                    <li>Social Responsibility</li>
-                    <li>Store Locations</li>
+                    <li><a href="#">Careers for Grodin</a></li>
+                    <li><a href="#">About Grogin</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Grogin Devices</a></li>
+                    <li><a href="#">Customer reviews</a></li>
+                    <li><a href="#">Social Responsibility</a></li>
+                    <li><a href="#">Store Locations</a></li>
                 </ul>
             </div>
             <div className='space-y-4'>
                 <h4 className='font-bold space-y-2'>Download our app</h4>
                 <div className='flex'>
-                    <img src={'/src/assets/images/Google Play.png'} alt="Google Play" />
+                    <Link to='https://play.google.com/'><img src={'/src/assets/images/Google Play.png'} alt="Google Play" /></Link>
                     <small className='ml-2 text-gray-600'>Download App Get <br /> - 10% Discount</small>
                 </div>
                 <div className='flex'>
-                    <img src={'/src/assets/images/Apple Store.png'} alt="Apple Store" />
+                    <Link to='https://www.apple.com/in/app-store/'><img src={'/src/assets/images/Apple Store.png'} alt="Apple Store" /></Link>
                     <small className='ml-2 text-gray-600'>Download App Get <br /> - 20% Discount</small>
                 </div>
                 <div className='space-y-2'>
                     <h6 className='text-xm text-gray-600'>Follow us on social media:</h6>
-                    <div className='flex space-x-3'>
-                        <img src={'/src/assets/images/Social/Facebook.png'} alt="Facebook" />
-                        <img src={'/src/assets/images/Social/Twitter.png'} alt="Twitter" />
-                        <img src={'/src/assets/images/Social/Instagram.png'} alt="Instagram" />
-                        <img src={'/src/assets/images/Social/LinkedIn.png'} alt="LinkedIn" />
+                    <div className='flex justify-between items-center space-x-3'>
+                        <div className='bg-white rounded-md p-2 flex text-xl  text-[#267ff3]'>
+                            <Link to='https://www.facebook.com/'>
+                                <FaFacebookF />
+                            </Link>
+                        </div>
+                        <div className='bg-white rounded-md p-2 flex text-xl  text-[#1da1f2]'>
+                            <Link to='https://twitter.com/'>
+                                <FaTwitter />
+                            </Link>
+                        </div>
+                        <div className='bg-white rounded-md p-2 flex text-xl text-[#fe8080]'>
+                            <Link to='https://www.instagram.com/'>
+                                <FaInstagram />
+                            </Link>
+                        </div>
+                        <div className='bg-white rounded-md p-2 flex text-xl  text-[#0077b5]'>
+                            <Link to ='https://in.linkedin.com/'>
+                                <FaLinkedin />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
