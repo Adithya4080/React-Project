@@ -3,26 +3,34 @@ import { Link } from 'react-router-dom';
 
 function NavbarBottom() {
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    const [menuClicked, setMenuClicked] = useState(false);
+    const handleMenuClick = () => {
+        setMenuClicked(!menuClicked)
+    }
+
     return (
         <div className='border-2 border-b-yellow-500'>
-            <div className="wrapper flex justify-between py-2 font-bold whitespace-nowrap">
+            <div className="wrapper flex justify-between py-3 whitespace-nowrap">
                 <div className='hidden sm:block'>              
-                    <div className='flex space-x-4'>
-                        <Link to='/'><h4>Home</h4></Link>
+                    <div className='flex space-x-6 font-medium cursor-pointer'>
+                        <Link to='/'>
+                            <h4 onClick={handleMenuClick} className={menuClicked ? 'text-[#634c9f]' : 'text-black'}>
+                                Home
+                            </h4>
+                        </Link>
                         <h4>Shop</h4>
-                        <h4> Fruits & vegetables</h4>
-                        <h4>Beverages</h4>
+                        <h4>Fruits & vegetables</h4>
+                        <h4> Beverages</h4>
                         <h4>Blog</h4>
                         <h4>Contact</h4>
                     </div>
                 </div>
                 <div className='hidden lg:block'>
-                    <div className='flex space-x-4'>
+                    <div className='flex space-x-4 font-bold'>
                         <h4>Trending Products</h4>
                         <div className='flex'>
                             <h4 className='text-red-600 mr-2'>Almost Finished</h4>

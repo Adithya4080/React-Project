@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react';
 import { FilterContext } from '../FilterContext';
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import FilterPanel from '../FilterPanel';
+import { MdOutlineGridView } from "react-icons/md";
+import { LuLayoutList } from "react-icons/lu";
 
 function ProductsTop({}) {
     const { selectedCategories, handleCategoryChange } = useContext(FilterContext);
@@ -28,6 +30,19 @@ function ProductsTop({}) {
                 <h2 className='font-bold text-3xl w-3/4'>Grocery store with different treasures</h2>
                 <p className='text-xm text-gray-600 w-3/4'>We have prepared special discounts  for you on grocery products...</p>
                 <button className='border bg-white text-black font-bold rounded-xl py-1 px-2'>Shop Now &rarr;</button>
+            </div>
+        </div>
+        <div className='bg-gray-200 py-3 mt-3 flex justify-between px-2 rounded-md'>
+            <div>
+                <p>Showing all 16 results</p>
+            </div>
+            <div className='flex space-x-4'>
+                <p>Sort: <b>Sort by latest</b></p>
+                <p><span>Show:</span>20 Items</p>
+                <div className='flex justify-center items-center text-xl space-x-4'>
+                    <MdOutlineGridView />
+                    <LuLayoutList />
+                </div>
             </div>
         </div>
         <div className="flex flex-wrap space-y-2 space-x-2 mt-5">

@@ -3,7 +3,7 @@ import React from 'react'
     function NavbarTop() {
     return (
         <div className='border border-b-gray-400 hidden lg:block'>
-        <div className='wrapper flex justify-between text-gray-500 py-1'>
+        <div className='wrapper flex justify-between text-gray-500 py-2'>
             <div className='flex space-x-4'>
                 <h5>About Us</h5>
                 <h5>My Account</h5>

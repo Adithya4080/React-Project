@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { FaUser, FaRegHeart } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { CiSearch} from 'react-icons/ci';
+import { CiSearch } from 'react-icons/ci';
+import { IoLocationOutline } from "react-icons/io5";
 import { MdShoppingCart } from "react-icons/md";
 import { FilterContext } from '../FilterContext';
 import { Link } from 'react-router-dom';
@@ -33,7 +33,7 @@ function NavbarMiddle() {
 
     return (
         <div className='border border-b-gray-400 sticky top-0 z-10 bg-white'>
-            <div className='wrapper py-3 flex justify-between'>
+            <div className='wrapper py-4 flex justify-between'>
                 <div className='flex space-x-2'>
                     <h1>
                         <Link to='/'>
@@ -42,8 +42,8 @@ function NavbarMiddle() {
                     </h1>
                     <div className='hidden md:block'>
                         <div className='flex justify-between text-center pt-1'>
-                            <FaLocationDot />
-                            <span>Deliver to all</span>
+                            <IoLocationOutline className='bg-gray-300 p-1 text-3xl rounded-xl mr-1' />
+                            <span className='whitespace'>Deliver to all</span>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ function NavbarMiddle() {
                 </div>
                 <div className='flex space-x-4 items-center whitespace-nowrap cursor-pointer'>
                     <div className="flex flex-col items-center" >
-                        <FaUser className="text-lg md:text-2xl" />
+                        <FaUser className="text-lg md:text-xl" />
                         {userData ? (
                             <h4 className="text-sm" onClick={() => handleLogout()}>Logout</h4>
                         ):(
@@ -67,15 +67,15 @@ function NavbarMiddle() {
                         )}                            
                     </div>
                     <div className="flex flex-col items-center">
-                        <FaRegHeart className="text-lg md:text-2xl" />
+                        <FaRegHeart className="text-lg md:text-xl" />
                         <h4 className="text-sm">Wishlist</h4>
-                        <span className="text-sm absolute top-0 ml-7 bg-red-700 text-white px-1 rounded-lg text-center">{wishlist.length}</span>
+                        <span className="text-sm absolute top-2 ml-6 bg-red-700 text-white px-1 rounded-lg text-center">{wishlist.length}</span>
                     </div>
                     <div className='hidden md:block'>
                         <div className="flex flex-col items-center">
                             <MdShoppingCart className="text-2xl" />
                             <h4 className="text-sm">Your Cart</h4>
-                            <span className="text-sm absolute top-0 ml-5 bg-red-700 text-white px-1 rounded-lg text-center">0</span>
+                            <span className="text-sm absolute top-2 ml-5 bg-red-700 text-white px-1 rounded-lg text-center">0</span>
                         </div>
                     </div>
                 </div>
