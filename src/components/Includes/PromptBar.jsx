@@ -48,21 +48,21 @@ const PromptBar = () => {
     }, []);
     
     return (
-        <div className='bg-purple-400 text-white py-2 hidden lg:block'>
+        <div className='bg-[#634c9f] text-white text-xm py-3 hidden lg:block'>
             <div className="wrapper flex justify-evenly">
                 <div>
-                    <p className='font-bold'>Free delivery & 40% Discount for next 3 orders! Place your 1st order in.</p>
+                    <p>Free delivery & 40% Discount for next 3 orders! Place your 1st order in.</p>
                 </div>
-                <div className='flex'>
+                <div className='flex font-extralight'>
                     <p>Until the end of the sale:</p>
                     {timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0 ? (
                         <p>Sale Has Ended!</p>
                     ):(
                         <div className="flex space-x-4 ml-2">
-                            <span>{timeLeft.days} days</span>
-                            <span>{timeLeft.hours} hours</span>
-                            <span>{timeLeft.minutes} minutes</span>
-                            <span>{timeLeft.seconds} sec.</span>
+                            <span><strong>{timeLeft.days}</strong> days</span>
+                            <span><strong>{timeLeft.hours}</strong> hours</span>
+                            <span><strong>{timeLeft.minutes} </strong>minutes</span>
+                            <span><strong>{timeLeft.seconds}</strong> sec.</span>
                         </div>
                     )}
                 </div>
