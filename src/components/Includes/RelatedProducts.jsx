@@ -25,7 +25,7 @@ function RelatedProducts({ category, wishlist, addToWishlist, removeFromWishlist
 
     return (
         <div className='space-y-5'>
-            <h4 className='font-bold'>Related Products</h4>
+            <h4 className='font-semibold'>Related Products</h4>
             <div className='grid grid-cols-2 lg:grid-cols-6 gap-4 cursor-pointer'>
                 {relatedProducts.map((item) => (
                     <Link key={item.id} to={`/products/${item.id}`}>
@@ -39,7 +39,7 @@ function RelatedProducts({ category, wishlist, addToWishlist, removeFromWishlist
                                 />
                             </div>                    
                             <div className='w-full'><img src={item.img} alt={item.name} className='w-full' /></div>
-                            <h3 className='font-bold text-xm'>{item.title}</h3>
+                            <h3 className='font-semibold text-xm'>{item.title}</h3>
                             <div className='flex justify-normal item-center'>
                                 {[...Array(5)].map((_, index) => (
                                     <AiFillStar
@@ -50,8 +50,8 @@ function RelatedProducts({ category, wishlist, addToWishlist, removeFromWishlist
                                 <h6 className='ml-2'>{item.review}</h6>
                             </div>
                             <div className='flex flex-wrap item-center space-x-3'>                    
-                                <h3 className='font-bold text-xl text-red-500'>${item.newPrice}</h3>
-                                <del className='text-xm font-bold'>${item.prevPrice}</del>
+                                <h3 className='font-medium text-xl text-red-500'>${item.newPrice}</h3>
+                                <del className='text-xm font-medium'>${item.prevPrice}</del>
                             </div>
                             <div className='flex item-center space-x-5'>
                                 <CiShoppingCart className='bg-green-500 text-3xl text-white p-1' />

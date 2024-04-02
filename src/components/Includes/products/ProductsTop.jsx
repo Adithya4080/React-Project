@@ -43,7 +43,7 @@ function ProductsTop({}) {
                 <button className='border bg-white text-black font-bold rounded-xl py-1 px-2'>Shop Now &rarr;</button>
             </div>
         </div>
-        <div className='bg-gray-200 py-3 mt-3 flex justify-between px-4 rounded-md'>
+        <div className='bg-gray-200 py-3 mt-3 flex justify-between px-4 rounded-md max-[768px]:hidden'>
             <div>
                 <p>Showing all 16 results</p>
             </div>
