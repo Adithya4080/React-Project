@@ -50,6 +50,16 @@ function ProductsSinglePage() {
         };
     };
 
+    const [wishlist, setWishlist] = useState([]);
+
+    const addToWishlist = (productId) => {
+        setWishlist([...wishlist, productId]);
+    };
+
+    const removeFromWishlist = (productId) => {
+        setWishlist(wishlist.filter(id => id !== productId));
+    };
+
     return (
         <div>
             <Helmet>
@@ -93,22 +103,22 @@ function ProductsSinglePage() {
                             </div>
                             <div className='flex items-center space-x-3'>                    
                                 <h3 className='font-bold text-4xl text-red-500'>${product.newPrice}</h3>
-                                <del className='text-xl font-bold'>${product.prevPrice}</del>
+                                <del className='text-xl font-medium'>${product.prevPrice}</del>
                             </div>
                             <div>
-                                <Button text='Order on WhatsApp' className='font-bold' />
+                                <Button text='Order on WhatsApp' />
                             </div>
                             <div className='hidden sm:block'>
-                                <div className="flex items-center bg-orange-300 p-4 rounded-lg">
-                                    <span className="text-red-500 font-bold">Special Offer :</span>
+                                <div className="flex items-center bg-[#fff7ed] p-4 rounded-lg">
+                                    <span className="text-[#ea580c] font-bold">Special Offer :</span>
                                     <div className="flex items-center ml-4">
                                         {Object.keys(time).map((unit) => (
                                         <div key={unit} className="flex flex-col items-center mx-2">
-                                            <span className="bg-white p-2 rounded-lg text-orange-800 text-xl font-bold">{String(time[unit]).padStart(2,'0')}</span>
+                                            <span className="bg-[#ffedd5] border border-[#fed9ae] p-2 rounded-lg text-orange-800 text-xl font-bold">{String(time[unit]).padStart(2,'0')}</span>
                                         </div>
                                         ))}
                                     </div>
-                                    <span className="text-gray-500 font-bold ml-4">Remains until the end of the offer.</span>
+                                    <span className="text-[#6b7280] font-medium ml-4">Remains until the end of the offer.</span>
                                 </div>
                             </div>
                             <div className='flex space-x-0 min-[420px]:space-x-2 max-[420px]:flex-col space-y-2'>
@@ -137,15 +147,15 @@ function ProductsSinglePage() {
                             <div className='flex flex-wrap space-x-0 min-[420px]:space-x-6 space-y-2 cursor-pointer'>
                                 <div className='flex items-center space-x-2'>
                                     <IoHeartOutline className='border p-1 text-3xl' />
-                                    <small className='font-bold'>Add to Wishlist</small>
+                                    <small className='font-medium'>Add to Wishlist</small>
                                 </div>
                                 <div className='flex items-center space-x-2'>
                                     <IoShareOutline  className='border p-1 text-3xl' />
-                                    <small className='font-bold'>Share this Product</small>
+                                    <small className='font-medium'>Share this Product</small>
                                 </div>
                                 <div className='flex items-center space-x-2'>
                                     <IoGitCompare className='border p-1 text-3xl' />
-                                    <small className='font-bold'>Compare</small>
+                                    <small className='font-medium'>Compare</small>
                                 </div>
                             </div>
                         </div>
@@ -158,7 +168,12 @@ function ProductsSinglePage() {
                         </div>
                     </div>
                     <div>
-                        <RelatedProducts category={product.category} wishlist={[]} addToWishlist={() => {}} removeFromWishlist={() => {}} />
+                        <RelatedProducts 
+                            category={product.category} 
+                            wishlist={wishlist} 
+                            addToWishlist={addToWishlist} 
+                            removeFromWishlist={removeFromWishlist} 
+                        />
                     </div>
                 </div>
             <Footer />

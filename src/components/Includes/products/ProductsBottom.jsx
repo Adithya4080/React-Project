@@ -30,7 +30,7 @@ function ProductsBottom() {
         {filteredProducts.length === 0 && (
                 <p className='font-bold'>No products in the selected price range.</p>
         )}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 md:grid-cols-3 mt-10 cursor-pointer'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 md:grid-cols-3 mt-10 cursor-pointer'>
             {filteredProducts.map((items) =>(
                 <div key={items.id} className='border p-2 space-y-2'>
                     <div className='flex justify-between'>
@@ -42,7 +42,7 @@ function ProductsBottom() {
                         />
                     </div>                    
                     <div className='w-full'><img src={items.img} alt={items.name} className='w-full' /></div>
-                    <Link key={items.id} to={`/products/${items.id}`}><h3 className='font-bold text-xm'>{items.title}</h3></Link>
+                    <Link key={items.id} to={`/products/${items.id}`}><h3 className='font-semibold text-xm'>{items.title}</h3></Link>
                     <div className='flex justify-normal items-center'>
                         {[...Array(5)].map((_, index) => (
                             <AiFillStar
@@ -54,7 +54,7 @@ function ProductsBottom() {
                     </div>
                     <div className='flex items-center space-x-3'>                    
                         <h3 className='font-bold text-xl text-red-500'>${items.newPrice}</h3>
-                        <del className='text-xm font-bold'>${items.prevPrice}</del>
+                        <del className='text-xm font-medium'>${items.prevPrice}</del>
                     </div>
                     <div className='flex items-center space-x-5'>
                         <CiShoppingCart className='bg-green-500 text-3xl text-white p-1' />
