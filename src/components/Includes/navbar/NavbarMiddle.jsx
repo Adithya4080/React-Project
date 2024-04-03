@@ -32,9 +32,9 @@ function NavbarMiddle() {
     }
 
     return (
-        <div className='border border-b-gray-400 sticky top-0 z-10 bg-white'>
-            <div className='wrapper py-4 flex justify-between'>
-                <div className='flex space-x-2'>
+        <div className='border border-b-gray-400 sticky top-0 z-10 bg-white flex justify-center items-center'>
+            <div className='wrapper py-4 flex justify-between space-x-6'>
+                <div className='flex space-x-6'>
                     <h1>
                         <Link to='/'>
                             <img src={'/src/assets/images/Logo.png'} alt="Logo" />
@@ -47,7 +47,7 @@ function NavbarMiddle() {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-grow items-center bg-gray-100 h-9 px-2 rounded-md mx-4'>
+                <div className='flex flex-grow items-center bg-gray-200 rounded-md py-1 px-4 max-[540px]:hidden'>
                     <input 
                         type="text" 
                         placeholder="Search for products, categories or brands..." 
@@ -57,7 +57,7 @@ function NavbarMiddle() {
                     />
                     <CiSearch className='text-black text-2xl' />
                 </div>
-                <div className='flex space-x-4 items-center whitespace-nowrap cursor-pointer'>
+                <div className='flex items-center whitespace-nowrap cursor-pointer space-x-6'>
                     <div className="flex flex-col items-center" >
                         <FaUser className="text-lg md:text-xl" />
                         {userData ? (

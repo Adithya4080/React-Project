@@ -11,6 +11,9 @@ function NavbarBottom() {
     const handleMenuClick = () => {
         setMenuClicked(!menuClicked)
     }
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
 
     return (
         <div className='border-2 border-b-yellow-500'>
@@ -45,8 +48,9 @@ function NavbarBottom() {
                 </div>
             </div>
             {isOpen && (
-                <div className='md:hidden'>
+                <div className='md:hidden fixed top-50% left-0 w-screen h-screen bg-white z-50'>
                     <div className='wrapper flex flex-col space-y-2 font-bold my-4'>
+                        <button onClick={closeMenu} className="absolute top-0 right-0 m-4 text-xl">&#x2716;</button>
                         <Link to='/'><h4>Home</h4></Link>
                         <h4>Shop</h4>
                         <h4> Fruits & vegetables</h4>

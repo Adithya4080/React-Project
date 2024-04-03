@@ -45,9 +45,9 @@ function ProductsBottom() {
         {filteredProducts.length === 0 && (
                 <p className='font-medium mt-5'>No products in the selected price range.</p>
         )}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 md:grid-cols-3 mt-10 cursor-pointer'>
+        <div className='grid max-[480px]:grid-cols-1 grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 md:grid-cols-3 mt-10 cursor-pointer max-[480px]:space-y-4'>
             {filteredProducts.map((items) =>(
-                <div key={items.id} className='border p-2 space-y-2'>
+                <div key={items.id} className='border p-2 space-y-2 max-[480px]:w-3/4'>
                     <div className='flex justify-between'>
                         <button className='border bg-red-600 text-white text-xs py-1 px-2 rounded-lg'>{items.discount}</button>
                         <FaHeart
