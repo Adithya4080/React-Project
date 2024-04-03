@@ -14,7 +14,7 @@ function FooterMiddle() {
                     <MdPhoneInTalk className='text-3xl' />
                     <div>
                         <p className='text-xs text-gray-700'>Monday-Friday: 08am-9pm</p>
-                        <h4 className='font-bold'>0 800 300-353</h4>
+                        <a href='tel:0800300353' className='font-bold'>0 800 300-353</a>
                     </div>
                 </div>
                 <div className='flex items-center space-x-4'>

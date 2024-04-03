@@ -5,6 +5,8 @@ import { CiShoppingCart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import { FilterContext } from '../FilterContext';
 import { Link } from 'react-router-dom';
+import { MdOutlineGridView } from "react-icons/md";
+import { LuLayoutList } from "react-icons/lu";
 
 
 function ProductsBottom() {
@@ -27,8 +29,21 @@ function ProductsBottom() {
 
     return (
         <>
+            <div className='bg-[#f3f4f6] py-3 mt-3 flex justify-between px-4 rounded-md max-[768px]:hidden'>
+                <div>
+                    <p className='text-[#959ba4]'>Showing all {filteredProducts.length} results</p>
+                </div>
+                <div className='flex justify-between space-x-4'>
+                    <p className='text-gray-500'>Sort:<span className='text-black font-medium ml-4'>Sort by latest</span></p>
+                    <p className='text-gray-500'>| Show:<span className='text-black font-medium ml-4'>20 Items</span></p>
+                    <div className='flex justify-center items-center text-xl space-x-4'>
+                        <MdOutlineGridView />
+                        <LuLayoutList />
+                    </div>
+                </div>
+            </div>
         {filteredProducts.length === 0 && (
-                <p className='font-bold'>No products in the selected price range.</p>
+                <p className='font-medium mt-5'>No products in the selected price range.</p>
         )}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 md:grid-cols-3 mt-10 cursor-pointer'>
             {filteredProducts.map((items) =>(
