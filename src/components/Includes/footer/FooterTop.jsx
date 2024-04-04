@@ -37,7 +37,7 @@ function FooterTop() {
                     />
                     <button className='border bg-violet-950 text-white border-none p-2 rounded-r-lg' onClick={handleSubmit}>Send</button>
                 </div>
-                <p className='text-xs text-gray-600'>By subscribing you agree to our <span style={{ color: 'darkviolet' }}>Terms & Conditions and Privacy & Cookies Policy.</span></p>
+                <p className='text-xs text-gray-500'>By subscribing you agree to our <span style={{ color: 'darkviolet' }}>Terms & Conditions and Privacy & Cookies Policy.</span></p>
             </div>
         </div>
     )
