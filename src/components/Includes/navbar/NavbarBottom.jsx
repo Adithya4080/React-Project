@@ -5,15 +5,14 @@ function NavbarBottom() {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
-    };
+    };   
 
-    const [menuClicked, setMenuClicked] = useState(false);
-    const handleMenuClick = () => {
-        setMenuClicked(!menuClicked)
-    }
-    const closeMenu = () => {
+    const [selectedMenu, setSelectedMenu] = useState(null);
+    const handleMenuClick = (menuName) => {
+        setSelectedMenu(menuName);
         setIsOpen(false);
-    };
+    }
+ 
 
     return (
         <div className='border-2 border-b-yellow-500'>
@@ -21,11 +20,13 @@ function NavbarBottom() {
                 <div className='hidden sm:block'>              
                     <div className='flex space-x-6 font-medium cursor-pointer'>
                         <Link to='/'>
-                            <h4 onClick={handleMenuClick} className={menuClicked ? 'text-[#634c9f]' : 'text-black'}>
+                            <h4 onClick={() => handleMenuClick('Home')} className={`menu-item ${selectedMenu === 'Home' ? 'text-[#634c9f]' : 'text-black'} `}>
                                 Home
                             </h4>
                         </Link>
-                        <h4>Shop</h4>
+                        <h4 onClick={() => handleMenuClick('Shop')} className={selectedMenu === 'Shop' ? 'text-[#634c9f]' : 'text-black'}>
+                            Shop
+                        </h4>
                         <h4>Fruits & vegetables</h4>
                         <h4> Beverages</h4>
                         <h4>Blog</h4>
