@@ -39,7 +39,7 @@ function ProductsTop({}) {
                     <button className='border bg-orange-200 font-semibold text-xs p-1 rounded-md text-amber-950 mb-3'>Only this week</button>
                     <h2 className='font-bold text-3xl w-3/4'>Grocery store with different treasures</h2>
                     <p className='text-xm text-gray-600 w-3/4'>We have prepared special discounts  for you on grocery products...</p>
-                    <button className='border bg-white text-black font-bold rounded-xl py-1 px-2'>Shop Now &rarr;</button>
+                    <button className='border bg-white text-black font-semibold rounded-xl py-1 px-2'>Shop Now &rarr;</button>
                 </div>
             </div>
         </>

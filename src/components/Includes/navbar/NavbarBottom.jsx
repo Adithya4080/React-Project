@@ -6,6 +6,9 @@ function NavbarBottom() {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };   
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
 
     const [selectedMenu, setSelectedMenu] = useState(null);
     const handleMenuClick = (menuName) => {
@@ -27,10 +30,18 @@ function NavbarBottom() {
                         <h4 onClick={() => handleMenuClick('Shop')} className={selectedMenu === 'Shop' ? 'text-[#634c9f]' : 'text-black'}>
                             Shop
                         </h4>
-                        <h4>Fruits & vegetables</h4>
-                        <h4> Beverages</h4>
-                        <h4>Blog</h4>
-                        <h4>Contact</h4>
+                        <h4 onClick={() => handleMenuClick('Shop')} className={selectedMenu === 'Shop' ? 'text-[#634c9f]' : 'text-black'}>
+                            Fruits & vegetables
+                        </h4>
+                        <h4 onClick={() => handleMenuClick('Shop')} className={selectedMenu === 'Shop' ? 'text-[#634c9f]' : 'text-black'}>
+                            Beverages
+                        </h4>
+                        <h4 onClick={() => handleMenuClick('Shop')} className={selectedMenu === 'Shop' ? 'text-[#634c9f]' : 'text-black'}>
+                            Blog
+                        </h4>
+                        <h4 onClick={() => handleMenuClick('Shop')} className={selectedMenu === 'Shop' ? 'text-[#634c9f]' : 'text-black'}>
+                            Contact
+                        </h4>
                     </div>
                 </div>
                 <div className='hidden lg:block'>

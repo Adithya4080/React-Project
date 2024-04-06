@@ -43,7 +43,7 @@ function NavbarMiddle() {
                     <div className='hidden md:block'>
                         <div className='flex justify-between text-center pt-1'>
                             <IoLocationOutline className='bg-gray-300 p-1 text-3xl rounded-xl mr-1' />
-                            <span className='whitespace'>Deliver to all</span>
+                            <span>Deliver to all</span>
                         </div>
                     </div>
                 </div>

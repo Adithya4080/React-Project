@@ -4,14 +4,14 @@ function SidebarBottom() {
   return (
     <div>
         <div className='border-b border-gray-300 py-4'>
-            <h3>Filter by Color</h3>
+            <h3 className='mb-2 font-semibold'>Filter by Color</h3>
             <div className="flex items-center">
                 <div className="w-4 h-4 rounded-full bg-green-500"></div>
                 <p className="ml-2 text-sm">Green</p>
             </div>
         </div>
         <div className='border-b border-gray-300 py-4'>
-            <h3>Filter by Brands</h3>
+            <h3 className='mb-2 font-semibold'>Filter by Brands</h3>
             <input
                 type="checkbox"
                 name="category"
@@ -19,7 +19,7 @@ function SidebarBottom() {
             <span className='ml-2'>Fresh</span>
         </div>
         <div className='border-b border-gray-300 py-4'>
-            <h3>Product Status</h3>
+            <h3 className='mb-2 font-semibold'>Product Status</h3>
             <div>
                 <input
                     type="checkbox"

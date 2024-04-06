@@ -21,7 +21,7 @@ const SidebarMiddle = () => {
 
     return (
         <div className='pt-3 pb-5 border-b border-gray-300'>
-            <h3 className='font-bold'>Product Categories</h3>
+            <h3 className='font-semibold mb-2'>Product Categories</h3>
             <ul>
                 {categories.map((category) => (
                     <li key={category} className="mb-2 whitespace-nowrap">

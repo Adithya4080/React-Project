@@ -13,7 +13,7 @@ const Sidebar = () => {
     return (
         <>
             <div className='border-b border-gray-300 pb-2 w-full space-y-4'>
-                <h3 className='mb-2 font-bold'>Widget price filter</h3>
+                <h3 className='mb-2 font-semibold'>Widget price filter</h3>
                 <div className='flex space-x-2'>
                     <div>
                         <h6 className='text-sm'>Min Price</h6>
