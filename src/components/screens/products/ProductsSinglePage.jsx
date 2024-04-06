@@ -68,7 +68,8 @@ function ProductsSinglePage() {
             <Navbar />
                 <div className='wrapper py-10'>
                     <div className="top flex justify-between w-full flex-col md:flex-row cursor-pointer">
-                        <div id='imgmagnifyer' className="left w-full md:w-5/12">
+                        <div className="left w-full md:w-5/12">
+                            <div>
                             <ReactImageMagnify {...{
                                 smallImage: {
                                     alt: product.name,
@@ -77,12 +78,19 @@ function ProductsSinglePage() {
                                 },
                                 largeImage: {
                                     src: selectedImage,
-                                    width: 1129,
-                                    height: 750
+                                    width: 1200,
+                                    height: 1800
                                 },
                                 isHintEnabled: true,
-                                shouldHideHintAfterFirstActivation: false
-                            }} />
+                                shouldHideHintAfterFirstActivation: false,
+                                enlargedImageContainerDimensions: {
+                                    width: '150%',
+                                    height: '150%'
+                                },
+                                magnifierSize: '30%',
+                                }} 
+                            />
+                            </div>
                             <div className='flex w-2/12 space-x-4'>
                                 <img src={product.img2} alt={product.name} onClick={() => handleImageClick(product.img2)} className='border border-red-500 w-full' />
                                 <img src={product.img3} alt={product.name} onClick={() => handleImageClick(product.img3)} className='border border-red-500 w-full' />

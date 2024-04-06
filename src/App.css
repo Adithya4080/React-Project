@@ -47,3 +47,14 @@
 .slider .thumb.active {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+/* ProductsSinglePage.css */
+
+.product-image {
+  width: 100%; /* Set initial width */
+  transition: transform 0.2s ease; /* Add transition for smooth zoom effect */
+}
+
+.product-image:hover {
+  transform: scale(1.5); /* Scale the image on hover */
+}
+
