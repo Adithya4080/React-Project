@@ -34,7 +34,7 @@ const SidebarMiddle = () => {
                         checked={selectedCategories.includes(category)}
                         onChange={() => handleCategoryChange(category)}
                         />
-                        <span className={`ml-2 ${selectedCategories.includes(category) ? "font-semibold" : ""}`}>{category}</span>
+                        <span className={`ml-2 ${selectedCategories.includes(category) ? "font-semibold" : "font-normal"}`}>{category}</span>
                     </label>
                     </li>
                 ))}
